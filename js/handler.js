@@ -4,14 +4,14 @@
 let __tag = [];
 let hello = [`
     There is no place like
-    1 2 7 .  0  .  0  .  1
+     1  2  7  .  0  .  0  .  1
 `,
     `
     这是因特网不为人知的角落
     也许整整一年只有你的访问
     那么
     请无论如何
-    阅读愉快   --easonzero
+    阅读愉快             --easonzero
 `
 ];
 
