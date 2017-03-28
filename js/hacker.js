@@ -50,7 +50,8 @@ class Hacker{
             let str = json.string.substring(json.start*3,(json.end-1)*3);
             let start = this.ctx.measureText(json.string.substring(0,json.start*3)).width;
 
-            //this.ctx.fillStyle = 'rgb(154,256,154)';
+            //
+            // this.ctx.fillStyle = 'rgb(154,256,154)';
             this.ctx.fillText(str,start,json.line*this.lineHeight);
 
             // if(json.end<this.length-1) {
