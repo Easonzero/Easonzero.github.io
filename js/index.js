@@ -29,6 +29,7 @@ const hacker = new Hacker(
 );
 
 terminal.render();
+terminal.input('help');
 
 content.on("mousewheel DOMMouseScroll", function (e) {
 
