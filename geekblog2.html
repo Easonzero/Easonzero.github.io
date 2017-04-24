@@ -16,20 +16,14 @@
 <h2 id="terminal">一个前端terminal的结构</h2>
 <p>从功能上来说，terminal需要具备接收用户输入，执行回调方法，返回数据显示在前端这三样功能。从组件划分上考虑呢，至少包括了提示头、游标、命令以及响应。基于以上需求，这里定了如下结构  </p>
 <ul>
-<li>class Terminal
-
-<ul>
+<li>class Terminal<ul>
 <li>input(ch);//接受用户输入接口</li>
 <li>render();//渲染方法</li>
 <li>listen();//监听按键事件方法</li>
 <li>cmdHandler(cmd);//命令回调方法</li></ul></li>
-<li>class Cursor
-
-<ul>
+<li>class Cursor<ul>
 <li>draw(x,y);//绘制</li></ul></li>
-<li>class Prompt
-
-<ul>
+<li>class Prompt<ul>
 <li>draw(x,y);//绘制</li></ul></li>
 </ul>
 <p>应该算是很清晰吧，一个terminal在初始化的时候调用监听方法设置按键监听器，发生按键事件则将字码转换为字符传入input方法，input方法主要是调用cmdHandler获得回显内容，然后计算所有组件的位置，通过render方法重新渲染整个界面。</p>
@@ -41,7 +35,7 @@
 }
 </code></pre>
 <h2 id="-1">组件位置计算</h2>
-<p>组件位置计算是为渲染函数减少计算量的重要一环。 <br />
+<p>组件位置计算是为渲染函数减少计算量的重要一环。<br />
 计算位置的时候主要需要考虑三种情况：输入回车时、输入删除键时，输入其他字符时。  </p>
 <ul>
 <li><p>输入回车时即为命令响应，需要调用cmdHandler获得回显内容，然后将回显内容转换为统一的数据结构存入响应数组中。最后在命令数组中压入一个空命令即可。游标的位置直接置为末行，水平初位置即可</p></li>
