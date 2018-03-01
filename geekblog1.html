@@ -12,7 +12,7 @@
             <h4>TAG:Node</h4><br>
     </header>
     <section class='markdown-body center'>
-        <p>呐，其实在GeekBlog我下力气写的东西就仨，一个是简单的博客生成器，一个是前端的终端，一个是数码流背景。待我一个一个慢慢道来...</p>
+        <p>呐，其实在GeekBlog我下力气写的东西就仨，一个是简单的博客生成器，一个是前端的终端，一个是数码流背景。待我一个一个慢慢道来…</p>
 <h2 id="">博客生成器的结构</h2>
 <p>一个博客生成器在需求上无非就是提供给使用者简单的接口来创建博客，管理文章。<br />
 呐，分析这两个需求，创建一个博客就是根据模板和配置文件生成一堆静态文件，可以想到流程大概是使用者发送一个命令，出发一个命令回调，然后博客生成器去找项目中的配置文件和模板文件，经过解析模块生成了一堆html、js、css数据，然后把这些数据写入build文件夹。
@@ -22,7 +22,7 @@
 <li>cli<ul>
 <li>命令1回调.js//一个命令回调</li>
 <li>命令2回调.js</li>
-<li>....js</li>
+<li>….js</li>
 <li>index.js//命令入口</li></ul></li>
 <li>src<ul>
 <li>server//调试服务器模块</li>
@@ -100,17 +100,6 @@ console.log(process.argv)
     <a class='fix-button return' href='./index.html'>
         Return
     </a>
-   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper center"></div>
-<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-<script>
-var cloudTieConfig = {
-  url: document.location.href, 
-  productKey: "ff39b4c96c3e4b3b8fab265264a8958b",
-  target: "cloud-tie-wrapper"
-};
-var yunManualLoad = true;
-Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-</script>
     <footer class='center'>
         <section class="bottom center">Powered By
             <a href="https://github.com/Easonzero/GeekBlog">GeekBlog</a>
